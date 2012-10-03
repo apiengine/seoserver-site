@@ -2,7 +2,7 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'text!templates/examples/social.html',
+  'text!templates/examples/json.html',
 ], function($, _, Backbone, socialTemplate){
   var HomePage = Backbone.View.extend({
     el: '.page',
@@ -26,15 +26,10 @@ define([
       var that = this;
       this.$el.html('Loading');
      $.ajax({
-          url: 'http://api.twitter.com/1/statuses/user_timeline.json/',
-          type: 'GET',
-          dataType: 'jsonp',
-          data: {
-              screen_name: 'apiengine'
-          },
+          url: 'http://stats.cdnjs.com?from=last wednesday&to=last wednesday',
           success: function(data, textStatus, xhr) {
             console.log(data);
-            that.$el.html(_.template(socialTemplate, {_:_, data:data}))''              
+            that.$el.html(_.template(socialTemplate, {_:_, data:data}));           
           }   
 
       }); 

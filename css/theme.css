@@ -14,3 +14,7 @@ code {
   margin-bottom: 10px;
   display: inline-block;
 }
+
+body {
+  overflow-y: scroll;
+}

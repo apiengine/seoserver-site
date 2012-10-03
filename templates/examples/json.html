@@ -1,0 +1,17 @@
+<div class="well">
+<h3>JSON data with Javascript template</h3>
+<p>Pulling in data from stats.cdnjs.com (a CORS enabled API)</p>
+<table class="table">
+<thead><tr><th>Library</th><th>Wednesday's hits</th></tr></thead>
+<tbody>
+<% for(library in data.libraries) { %>
+<tr><td><%= library %></td><td><%= data.libraries[library][0].hits %></td></tr>
+<% }; %>
+  </tbody>
+</table>
+</div>
+  <hr />
+<button class="btn btn-info showseo">What does Google see?</button>
+  <hr />
+<textarea class="showseo-output" disabled="disabled"></textarea>
+</div>
