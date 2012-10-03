@@ -1,0 +1,17 @@
+<div class="well">
+<h3>Here we are pulling in some tweets</h3>
+<p><strong>User:</strong> <a href="http://twitter.com/apiengine">ApiEngine</a></p>
+<table class="table">
+<thead><tr><th>Tweet</th></tr></thead>
+<tbody>
+<% _.each(data, function(tweet) { %>
+<tr><td><%= tweet.text %></td></tr>
+<% }); %>
+  </tbody>
+</table>
+</div>
+  <hr />
+<button class="btn btn-info showseo">What does Google see?</button>
+  <hr />
+<textarea class="showseo-output" disabled="disabled"></textarea>
+</div>

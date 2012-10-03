@@ -2,8 +2,8 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'text!templates/home/page.html',
-], function($, _, Backbone, homeTemplate){
+  'text!templates/examples/social.html'
+], function($, _, Backbone, socialTemplate){
   var HomePage = Backbone.View.extend({
     el: '.page',
     initialize: function () {
@@ -23,7 +23,21 @@ define([
       })
     },
     render: function () {
-      this.$el.html(homeTemplate); 
+      var that = this;
+      this.$el.html('Loading');
+      $.ajax({
+          url: 'http://api.twitter.com/1/statuses/user_timeline.json/',
+          type: 'GET',
+          dataType: 'jsonp',
+          data: {
+              screen_name: 'apiengine'
+          },
+          success: function(data, textStatus, xhr) {
+            console.log(data);
+            that.$el.html(_.template(socialTemplate, {_:_, data:data}));            
+          }   
+
+      }); 
     }
   });
   return HomePage;
