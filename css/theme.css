@@ -3,6 +3,7 @@
   width: 157px;
   height: 34px;
   background: url('../img/api-engine-logo_official.png');
+  display: inline-block;
 }
 
 .showseo-output {
@@ -17,4 +18,9 @@ code {
 
 body {
   overflow-y: scroll;
+}
+
+h1 {
+  margin-left: 17px;
+margin-bottom: 16px;
 }
