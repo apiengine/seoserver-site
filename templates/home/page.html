@@ -14,6 +14,7 @@
   <code>seoserver start</code>
   <p>Which starts an Express server on port 3000 or</p>
   <code> seoserver -p 4000 start</code> 
+
   <h3>Telling GoogleBot to fetch from Seo Server</h3>
   <p>To tell GoogleBot that we are using ajaxed content we simply add to our sites index.html file the Google specific <a href="https://developers.google.com/webmasters/ajax-crawling/docs/specification">meta tag</a>. If you view the source of this page you can see we have included the tag below. </p>
   <code>&lt;meta name="fragment" content="!"&gt;</code>
@@ -23,7 +24,8 @@
     RewriteCond %{QUERY_STRING} ^_escaped_fragment_=(.*)$<br />
     RewriteRule (.*) http://address-of-seoserver:3000/%1? [P]
   </code>
-  <p>Now all request from GoogleBot will be returned fully rendered.</p>
+  <p>Now all request from GoogleBot will be returned fully rendered. How GoogleBot sees the page can be tested with Google <a href="http://www.google.com/webmasters/">WebMasters</a>(they allow you to simulate Google crawls and see the result instantly).</p>
+
   <h3>For other crawlers</h3>
   <p>
     Using mod rewrite, we can send other crawlers to Seo Server also
@@ -33,6 +35,8 @@
     RewriteRule (.*) http://address-of-seoserver:3000/%1? [P]
 
   </code>
+  <h3>FAQ</h3>
+  <p>Nothing here yet, but check out the examples on the left to see different types of ajaxed content. Also ask questions and give feedback on GitHub <a href="https://github.com/apiengine/seoserver/issues">issues</a>.
   <hr />
 <button class="btn btn-info showseo">What does Google see?</button>
   <hr />
