@@ -39,8 +39,3 @@
   </code>
   <h3>FAQ</h3>
   <p>Nothing here yet, but check out the examples on the left to see different types of ajaxed content. Also ask questions and give feedback on GitHub <a href="https://github.com/apiengine/seoserver/issues">issues</a>.
-  <hr />
-<button class="btn btn-info showseo">What does Google see?</button>
-  <hr />
-<textarea class="showseo-output" disabled="disabled"></textarea>
-
