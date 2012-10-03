@@ -9,3 +9,8 @@
    width: 100%; 
    height: 300px;
 }
+
+code {
+  margin-bottom: 10px;
+  display: inline-block;
+}
