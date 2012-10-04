@@ -19,8 +19,8 @@ define([
       // Attach hooks to links for pushstate
       $('body').on('click', 'a', function (e) {
         if($(this).attr('href').substr(0,4) !== 'http') {
-          clicky.log($(this).attr('href'), $(this).attr('href'), 'pageview')
-          Backbone.router.navigate($(this).attr('href'), true);
+          clicky.log($(this).attr('href'), $(this).attr('href').replace('!', ''), 'pageview')
+          Backbone.router.navigate($(this).attr('href').replace('!/', ''), true);
           return false;
         } 
       });
