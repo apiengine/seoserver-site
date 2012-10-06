@@ -23,6 +23,7 @@ define([
       })
     },
     render: function () {
+      $('title').text('Seo Server - Enable SEO for your Javascript applications')
       this.$el.html(homeTemplate); 
     }
   });
