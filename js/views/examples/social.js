@@ -15,7 +15,6 @@ define([
       'click .showseo': 'showSeo'
     },
     showSeo: function () {
-      $('title').text('Seo Server - Social Media Example')
       $('.showseo-output').val('Loading...');
       $.ajax('http://seo.apiengine.io:3000/' + window.location.pathname, {
         success: function (res) {
@@ -25,6 +24,7 @@ define([
     },
     render: function () {
       var that = this;
+      $('title').text('Seo Server - Social Media Example')
       this.$el.html('Loading');
       $.ajax({
           url: 'http://api.twitter.com/1/statuses/user_timeline.json/',

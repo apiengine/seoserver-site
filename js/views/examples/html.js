@@ -15,7 +15,6 @@ define([
       'click .showseo': 'showSeo'
     },
     showSeo: function () {
-      $('title').text('Seo Server - Plain HTML Example')
       $('.showseo-output').val('Loading...');
       $.ajax('http://seo.apiengine.io:3000/' + window.location.pathname, {
         success: function (res) {
@@ -25,6 +24,7 @@ define([
     },
     render: function () {
       this.$el.html(homeTemplate); 
+      $('title').text('Seo Server - Plain HTML Example')
     }
   });
   return HomePage;
