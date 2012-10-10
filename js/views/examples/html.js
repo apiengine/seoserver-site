@@ -16,7 +16,7 @@ define([
     },
     showSeo: function () {
       $('.showseo-output').val('Loading...');
-      $.ajax('http://seo.apiengine.io:3000/' + window.location.pathname, {
+      $.ajax('http://seo.apiengine.io:4000/seo' + window.location.pathname, {
         success: function (res) {
           $('.showseo-output').val(res);
         }
