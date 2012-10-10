@@ -16,7 +16,7 @@ define([
     },
     showSeo: function () {
       $('.showseo-output').val('Loading...');
-      $.ajax('http://seoserver-web.herokuapp.com/seo' + window.location.pathname, {
+      $.ajax('http://seo.apiengine.io:4000/seo' + window.location.pathname, {
         success: function (res) {
           $('.showseo-output').val(res);
         }
